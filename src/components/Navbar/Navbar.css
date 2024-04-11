@@ -1,0 +1,30 @@
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--dull-blue);
+    padding: 1.5rem;
+    align-items: center;
+    background-color: var(--dull-blue);
+    color: whitesmoke;
+}
+.navbar-wrapper div:nth-child(1) {
+   font-size: xx-large;
+   letter-spacing: 13px;
+   font-weight: 700;
+}
+
+
+.navbar-wrapper div:nth-child(2) {
+    flex-basis: 65%;
+}
+
+.navbar-wrapper div:nth-child(2) input{
+    width: 100%;
+    height: 25px;
+    padding: 10px;
+    background-color: var(--light-prime-gray);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: larger;
+}
