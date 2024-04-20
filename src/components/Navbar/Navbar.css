@@ -28,3 +28,21 @@
     color: white;
     font-size: larger;
 }
+.search-bar{
+    position: relative;
+}
+#result-list {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 100%;
+    color: black;
+}
+#result-list > .autocomplete-result{
+    font-size: medium;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom : 1px solid black ;
+
+}
+
