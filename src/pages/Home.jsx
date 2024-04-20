@@ -5,30 +5,13 @@ import { searchMovie } from '../apis/omdb';
 // Components Import 
 import MovieCard from '../components/MovieCard/MovieCard';
 import  axios from 'axios';
+import useMovieList from '../hooks/useMovieList';
 
 
 
 const Home = () => {
 
-    const [movieList, setMovieList] = useState([]);
-
-    async function downloadDefaultMovie(...args){
-        const urls = args.map((name) => searchMovie(name));
-        // console.log(urls);
-        const response = await axios.all(urls.map(url => axios.get(url)));
-        // console.log(response);
-        const movies = response.map((movieResponse) => movieResponse.data.Search);
-        // console.log(movies);
-        console.log([].concat(...movies));
-        setMovieList([].concat(...movies));
-        // setMovieList([...movieList, response.data.Search]);
-    }
-
-    useEffect(() => {
-      downloadDefaultMovie('harry','batman', 'avengers');
-      
-    }, []);
-
+  const {movieList} = useMovieList('harry','batman', 'avengers');
   return (
     <>
        <div className='movie-card-wrapper'>

@@ -1,10 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './Navbar.css'
+import useMovieList from '../../hooks/useMovieList';
 
 
 function Navbar(){
 
-    const resultListRef = useRef(null);
+    // const resultListRef = useRef(null);
+    const [isAutoCompleteVisible, setIsAutoCompleteVisible] = useState(false);
+    const[searchTerm, setSearchTerm] = useState('');
+    const{movieList} = useMovieList(!searchTerm ?'Ram' : searchTerm);
 
   return (
     <div className='navbar-wrapper'>
@@ -15,17 +19,21 @@ function Navbar(){
                 id='movie-search-input'
                 type="text"
                 onFocus={() => {
-                  resultListRef.current.style.display = 'block';
+                  // resultListRef.current.style.display = 'block';
+                  setIsAutoCompleteVisible(true);
                 }}
                 onBlur={() => {
-                  resultListRef.current.style.display = 'none';
+                  setIsAutoCompleteVisible(false);
+                }}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
                 }}
                 placeholder='What Movie you are Thinking About....'
             />
-            <div id='result-list' ref={resultListRef}>
-                <div  className='autocomplete-result'>Result 1</div>
-                <div  className='autocomplete-result'>Result 2</div>
-                <div  className='autocomplete-result'>Result 3</div>
+            <div id='result-list' style={{display : (isAutoCompleteVisible) ? 'block' : 'none'}}>
+                { movieList.length >0 &&  movieList.map(movie => 
+                <div key={movie.imdbID} className='autocomplete-result'>{movie.Title}</div>)}
+          
             </div>
 
         </div>
