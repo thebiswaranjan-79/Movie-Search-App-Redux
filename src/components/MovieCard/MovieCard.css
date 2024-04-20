@@ -1,5 +1,6 @@
 .movie-wrapper{
     width: 21%;
+    margin-bottom: 3rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
