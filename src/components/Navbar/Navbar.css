@@ -36,6 +36,9 @@
     background-color: whitesmoke;
     width: 100%;
     color: black;
+    max-height: 400px;
+    overflow-y: scroll;
+    box-shadow: 1rem;
 }
 #result-list > .autocomplete-result{
     font-size: medium;
@@ -45,4 +48,11 @@
     border-bottom : 1px solid black ;
 
 }
+.movie-base-title > a{
+    color: white;
+    text-decoration: none;
+}
 
+.autocomplete-result:hover{
+    background-color: gainsboro;
+}

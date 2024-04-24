@@ -1,4 +1,4 @@
-function useDebounce(callback, delay =1000){
+function useDebounce(callback, delay =  500){
     // it takes a callback and return a modified callback , that  executes after a delay
     let timerId; 
     return (...args) => {

@@ -12,6 +12,7 @@ import useMovieList from '../hooks/useMovieList';
 const Home = () => {
 
   const {movieList} = useMovieList('harry','batman', 'avengers');
+  
   return (
     <>
        <div className='movie-card-wrapper'>

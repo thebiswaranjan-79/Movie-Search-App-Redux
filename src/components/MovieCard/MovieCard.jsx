@@ -1,7 +1,7 @@
 import React from 'react'
 import './MovieCard.css';
 
-function MovieCard({Title, Year, Type, Poster}) {
+function MovieCard({Title, Year, Type, Poster, Imdb}) {
   return (
     <div className='movie-wrapper'>
         <div className='movie-image'>
