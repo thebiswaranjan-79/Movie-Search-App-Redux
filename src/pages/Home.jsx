@@ -19,6 +19,7 @@ const Home = () => {
            { movieList.length >0 && movieList.map(movie => <MovieCard 
                                     key={movie.imdbID}
                                     {...movie}
+                                    id = {movie.imdbID}
                                     />
             )}
        </div>
