@@ -1,8 +1,32 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### Description
+-   This is a movie search app built using React and Tailwind CSS. It uses the OMDB API.
+-    You can see the list of movies in the home page.
+-    You can search for movies using the search bar.
+-    You can click on a movie to see more details about it.
+
+### FYI
+-   Pagination is implemented.
+-   Error handling is implemented.
+-   The app is responsive.
+
+### Local Setup
+1. Clone the repo
+-   git clone https://github.com/irahuldutta02/cine-search
+-    cd cine-search
+2. Install dependencies
+-   npm install
+3. Set up the .env
+-   VITE_OMDB_API_KEY=<YOUR_KEY> # get it from [https://www.omdbapi.com/apikey.aspx]
+4. Start the development server
+-    npm run dev
+-    Technologies
+-    Tech Stack Used
+-    React
+-    Tailwind CSS
+-    React Router Dom
+-    Packages Used
+-    Axios
