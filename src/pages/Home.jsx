@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import './Home.css';
-import { searchMovie } from '../apis/omdb';
+// import { searchMovie } from '../apis/omdb';
 
 // Components Import 
 import MovieCard from '../components/MovieCard/MovieCard';
-import  axios from 'axios';
+// import  axios from 'axios';
 import useMovieList from '../hooks/useMovieList';
-
 
 
 const Home = () => {

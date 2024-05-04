@@ -1,12 +1,31 @@
 :root {
+    /* Dark mode */
     --prime-blue : #00a0d6;
     --dull-blue : #364f65;
     --dark-blue : #191e26;  
+    --card-background: whitesmoke;
+    --font-color:black;
+    --font-color-inverted : white;
     --light-prime-gray : #32373e;
+}
+    [data-theme = 'light']{
+        /* Light Mode */
+        --prime-blue : #00a0d6;
+        --dull-blue : #364f65;
+        --dark-blue : #fff;  
+        --light-prime-gray : rgb(195, 194, 207);
+        --card-background: #364f65;
+        --font-color:white;
+        --font-color-inverted : black;
+    }
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+#app-wrapper {
     background-color: var(--dark-blue);
     
 }
